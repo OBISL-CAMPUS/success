@@ -63,6 +63,14 @@
             animation-play-state: running;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
         /* Print formatting */
         @media print {
             body {
@@ -135,7 +143,7 @@
         
         <!-- Sticky Sidebar Navigation (no-print) -->
         <aside class="w-full lg:w-72 flex-shrink-0 no-print">
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 sticky top-26 flex flex-col space-y-1.5">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 sticky top-24 flex flex-col space-y-1.5">
                 <div class="pb-3 border-b border-slate-100 mb-2">
                     <p class="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase mb-1" data-lang="en">Core Tracks</p>
                     <p class="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase mb-1" data-lang="si">ප්‍රධාන මොඩියුල</p>
@@ -515,8 +523,8 @@
                                     <div class="space-y-0.5">
                                         <p class="font-bold text-slate-700" data-lang="en">Connecting with Future Self</p>
                                         <p class="font-bold text-slate-700" data-lang="si">අනාගත ආත්මය සමඟ සම්බන්ධ වීම</p>
-                                        <p class="text-[10px] text-slate-400" data-lang="en">Ask your future perfect self for leadership guidelines.</p>
-                                        <p class="text-[10px] text-slate-400" data-lang="si">ඔබේ අනාගත සාර්ථක ආත්මයෙන් මේ මොහොතට මගපෙන්වීම් ඉල්ලන්න.</p>
+                                        <p class="text-[10px] text-slate-450 text-slate-500" data-lang="en">Ask your future perfect self for leadership guidelines.</p>
+                                        <p class="text-[10px] text-slate-450 text-slate-500" data-lang="si">ඔබේ අනාගත සාර්ථක ආත්මයෙන් මේ මොහොතට මගපෙන්වීම් ඉල්ලන්න.</p>
                                     </div>
                                 </label>
                                 <label class="flex items-start space-x-3 text-xs text-slate-600 cursor-pointer">
@@ -524,8 +532,8 @@
                                     <div class="space-y-0.5">
                                         <p class="font-bold text-slate-700" data-lang="en">5 – 10 Minutes of Mindfulness</p>
                                         <p class="font-bold text-slate-700" data-lang="si">විනාඩි 5 - 10ක සතිමත්භාවය (භාවනාව)</p>
-                                        <p class="text-[10px] text-slate-400" data-lang="en">Perform breathing visualizer exercise from the Mindfulness tab.</p>
-                                        <p class="text-[10px] text-slate-400" data-lang="si">ජර්නලයේ ඇති භාවනා අංශය භාවිතයෙන් හුස්ම ගැනීම් පාලනය කරන්න.</p>
+                                        <p class="text-[10px] text-slate-450 text-slate-500" data-lang="en">Perform breathing visualizer exercise from the Mindfulness tab.</p>
+                                        <p class="text-[10px] text-slate-450 text-slate-500" data-lang="si">ජර්නලයේ ඇති භාවනා අංශය භාවිතයෙන් හුස්ම ගැනීම් පාලනය කරන්න.</p>
                                     </div>
                                 </label>
                                 <!-- Custom Growth Tasks -->
@@ -577,7 +585,7 @@
                             <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between items-center text-center shadow-sm">
                                 <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Exercise Routine</p>
                                 <div class="my-3">
-                                    <i class="fa-solid fa-person-running text-4xl text-orange-550 text-orange-550 text-orange-550 text-orange-550 text-orange-550 text-orange-500"></i>
+                                    <i class="fa-solid fa-person-running text-4xl text-orange-500"></i>
                                 </div>
                                 <div class="flex items-center space-x-1.5 justify-center">
                                     <input type="number" id="exercise-mins" class="w-14 text-center bg-slate-50 border border-slate-200 rounded-lg py-1 font-extrabold text-xs text-slate-700" value="0">
@@ -684,7 +692,7 @@
                         <!-- Countdowns -->
                         <div id="meditation-counter" class="hidden text-center p-4 bg-slate-50 rounded-xl border border-slate-200">
                             <span class="text-2xl font-black text-slate-850 text-slate-800" id="meditation-timer-display">05:00</span>
-                            <p class="text-[9px] text-slate-450 uppercase tracking-widest font-black mt-1">Remaining Time / ඉතිරි කාලය</p>
+                            <p class="text-[9px] text-slate-500 uppercase tracking-widest font-black mt-1">Remaining Time / ඉතිරි කාලය</p>
                         </div>
                     </div>
                 </div>
@@ -813,15 +821,15 @@
                     <!-- Student Profile Form -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-slate-50 p-4 rounded-xl border border-slate-200">
                         <div class="space-y-1">
-                            <label class="text-[9px] font-extrabold text-slate-450 text-slate-500 uppercase">Student Name / ශිෂ්‍යයාගේ නම</label>
+                            <label class="text-[9px] font-extrabold text-slate-500 uppercase">Student Name / ශිෂ්‍යයාගේ නම</label>
                             <input type="text" id="report-name" class="w-full bg-transparent border-b border-slate-300 font-black text-slate-900 text-xs py-1 outline-none" value="Dear Student" oninput="saveProgressLocally()">
                         </div>
                         <div class="space-y-1">
-                            <label class="text-[9px] font-extrabold text-slate-450 text-slate-500 uppercase">Date of Evaluation / දිනය</label>
+                            <label class="text-[9px] font-extrabold text-slate-500 uppercase">Date of Evaluation / දිනය</label>
                             <input type="text" id="report-date" class="w-full bg-transparent border-b border-slate-300 font-black text-slate-900 text-xs py-1 outline-none" value="Today">
                         </div>
                         <div class="space-y-1">
-                            <label class="text-[9px] font-extrabold text-slate-450 text-slate-500 uppercase">Evaluation Code / කේතය</label>
+                            <label class="text-[9px] font-extrabold text-slate-500 uppercase">Evaluation Code / කේතය</label>
                             <p class="text-xs font-black text-slate-800 py-1">OBISL-90D-PASS</p>
                         </div>
                     </div>
@@ -914,8 +922,7 @@
     <!-- Footer Copyright -->
     <footer class="bg-white text-slate-500 text-xs py-8 mt-12 border-t border-slate-200 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
-            <p>&copy;OBISL Campus | All Rights Reserved | 0788 03 03 03 | study@obisl.com |
- www.obisl.com</p>
+            <p>&copy;OBISL Campus | All Rights Reserved | 0788 03 03 03 | study@obisl.com | www.obisl.com</p>
             <p class="text-slate-400 font-bold uppercase tracking-widest text-[9px]">
                 Concept Development, Intellectual Property & Curriculum created by <span class="text-amber-600 font-bold">Michael Ranuka Gamage (MRG)</span> &bull; Ocean Bridge International
             </p>
@@ -1041,20 +1048,25 @@
             "ඵලදායිතාවය (Productivity)", "සමාජීය කුසලතා (Social Skills)", "වෘත්තීය වර්ධනය (Professional)", "පෞරුෂත්ව හැඩගැස්ම (Grooming)"
         ];
 
+        const ojtsAnswers = {};
+        const bigFiveAnswers = {};
+        const evaluations = {};
+
         // Initializer
         window.onload = function() {
-            renderOJTS();
-            renderBigFive();
-            renderPillars();
             loadProgress();
             
             // Set current date in tracker
             const today = new Date().toISOString().split('T')[0];
-            document.getElementById('growth-date').value = today;
-            document.getElementById('report-date').value = today;
+            if (!document.getElementById('growth-date').value) {
+                document.getElementById('growth-date').value = today;
+            }
+            if (!document.getElementById('report-date').value || document.getElementById('report-date').value === 'Today') {
+                document.getElementById('report-date').value = today;
+            }
             
-            // Set language to Both on load
-            changeLanguage('both');
+            // Set language to Both or loaded choice
+            changeLanguage(currentLanguage);
         };
 
         // Change Language Toggle Module
@@ -1086,7 +1098,7 @@
                 }
             });
 
-            // Re-render Dynamic Element lists to respect the chosen language format immediately
+            // Re-render Dynamic Element lists immediately
             renderOJTS();
             renderBigFive();
             renderPillars();
@@ -1190,7 +1202,6 @@
         }
 
         // State storage for profiler
-        const ojtsAnswers = {};
         function selectOJTSAnswer(qId, score) {
             // Deselect old
             for(let s = 1; s <= 5; s++) {
@@ -1219,7 +1230,7 @@
                     label.innerHTML = `
                         <span class="text-obisl-accent font-mono text-[9px] uppercase tracking-wider font-extrabold">Indicator #${q.id}</span>
                         <span>I ${q.text}</span>
-                        <span class="text-slate-550 text-slate-500 font-medium">${q.textSi}</span>
+                        <span class="text-slate-500 font-medium">${q.textSi}</span>
                     `;
                 } else if (currentLanguage === 'si') {
                     label.innerHTML = `
@@ -1268,7 +1279,6 @@
             });
         }
 
-        const bigFiveAnswers = {};
         function selectBigFiveAnswer(qId, score) {
             for(let s = 1; s <= 5; s++) {
                 const el = document.getElementById(`bf-q-${qId}-${s}`);
@@ -1281,7 +1291,6 @@
         }
 
         // Render 10 Pillars of Growth
-        const evaluations = {};
         function renderPillars() {
             const container = document.getElementById('pillars-container');
             container.innerHTML = "";
@@ -1354,16 +1363,14 @@
 
             // Re-apply Stars rating
             growthPillars.forEach((p, pIdx) => {
-                const rating = evaluations[p];
-                if (rating) {
-                    for(let star = 1; star <= 10; star++) {
-                        const btn = document.getElementById(`star-${pIdx}-${star}`);
-                        if (btn) {
-                            if (star <= rating) {
-                                btn.className = "text-amber-500 text-sm transition scale-110";
-                            } else {
-                                btn.className = "text-slate-300 hover:text-amber-500 text-sm transition";
-                            }
+                const rating = evaluations[p] || 0;
+                for(let star = 1; star <= 10; star++) {
+                    const btn = document.getElementById(`star-${pIdx}-${star}`);
+                    if (btn) {
+                        if (star <= rating) {
+                            btn.className = "text-amber-500 text-sm transition scale-110";
+                        } else {
+                            btn.className = "text-slate-300 hover:text-amber-500 text-sm transition";
                         }
                     }
                 }
@@ -1383,10 +1390,13 @@
                 return;
             }
 
-            const ie = 30 - ojtsAnswers[3] - ojtsAnswers[7] - ojtsAnswers[11] - ojtsAnswers[15] - ojtsAnswers[19] - ojtsAnswers[23] - ojtsAnswers[27] - ojtsAnswers[31];
-            const sn = 12 + ojtsAnswers[4] + ojtsAnswers[8] + ojtsAnswers[12] + ojtsAnswers[16] + ojtsAnswers[20] - ojtsAnswers[24] - ojtsAnswers[28] + ojtsAnswers[32];
-            const ft = 30 - ojtsAnswers[2] + ojtsAnswers[6] + ojtsAnswers[10] - ojtsAnswers[14] - ojtsAnswers[18] + ojtsAnswers[22] - ojtsAnswers[26] - ojtsAnswers[30];
-            const jp = 18 + ojtsAnswers[1] + ojtsAnswers[5] - ojtsAnswers[9] + ojtsAnswers[13] - ojtsAnswers[17] + ojtsAnswers[21] - ojtsAnswers[25] + ojtsAnswers[29];
+            const getOJ = (id) => Number(ojtsAnswers[id] || 0);
+
+            // Open Extended Jungian Type Scales Formulas (IE Scale offset of 48 resolves scale boundary in bounds [8, 40])
+            const ie = 48 - getOJ(3) - getOJ(7) - getOJ(11) - getOJ(15) - getOJ(19) - getOJ(23) - getOJ(27) - getOJ(31);
+            const sn = 12 + getOJ(4) + getOJ(8) + getOJ(12) + getOJ(16) + getOJ(20) - getOJ(24) - getOJ(28) + getOJ(32);
+            const ft = 30 - getOJ(2) + getOJ(6) + getOJ(10) - getOJ(14) - getOJ(18) + getOJ(22) - getOJ(26) - getOJ(30);
+            const jp = 18 + getOJ(1) + getOJ(5) - getOJ(9) + getOJ(13) - getOJ(17) + getOJ(21) - getOJ(25) + getOJ(29);
 
             const typeE_I = ie > 24 ? "E" : "I";
             const typeN_S = sn > 24 ? "N" : "S";
@@ -1443,12 +1453,14 @@
                 return;
             }
 
-            // Score formulas from PDF:
-            const e = 20 + bigFiveAnswers[1] - bigFiveAnswers[6] + bigFiveAnswers[11] - bigFiveAnswers[16] + bigFiveAnswers[21] - bigFiveAnswers[26] + bigFiveAnswers[31] - bigFiveAnswers[36] + bigFiveAnswers[41] - bigFiveAnswers[46];
-            const a = 14 - bigFiveAnswers[2] + bigFiveAnswers[7] - bigFiveAnswers[12] + bigFiveAnswers[17] - bigFiveAnswers[22] + bigFiveAnswers[27] - bigFiveAnswers[32] + bigFiveAnswers[37] + bigFiveAnswers[42] + bigFiveAnswers[47];
-            const c = 14 + bigFiveAnswers[3] - bigFiveAnswers[8] + bigFiveAnswers[13] - bigFiveAnswers[18] + bigFiveAnswers[23] - bigFiveAnswers[28] + bigFiveAnswers[33] - bigFiveAnswers[38] + bigFiveAnswers[43] + bigFiveAnswers[48];
-            const n = 38 - bigFiveAnswers[4] + bigFiveAnswers[9] - bigFiveAnswers[14] + bigFiveAnswers[19] - bigFiveAnswers[24] - bigFiveAnswers[29] - bigFiveAnswers[34] - bigFiveAnswers[39] - bigFiveAnswers[44] - bigFiveAnswers[49];
-            const o = 8 + bigFiveAnswers[5] - bigFiveAnswers[10] + bigFiveAnswers[15] - bigFiveAnswers[20] + bigFiveAnswers[25] - bigFiveAnswers[30] + bigFiveAnswers[35] + bigFiveAnswers[40] + bigFiveAnswers[45] + bigFiveAnswers[50];
+            const getB5 = (id) => Number(bigFiveAnswers[id] || 0);
+
+            // Standard formulas mapping inputs cleanly in boundary bounds [0, 40]
+            const e = 20 + getB5(1) - getB5(6) + getB5(11) - getB5(16) + getB5(21) - getB5(26) + getB5(31) - getB5(36) + getB5(41) - getB5(46);
+            const a = 14 - getB5(2) + getB5(7) - getB5(12) + getB5(17) - getB5(22) + getB5(27) - getB5(32) + getB5(37) + getB5(42) + getB5(47);
+            const c = 14 + getB5(3) - getB5(8) + getB5(13) - getB5(18) + getB5(23) - getB5(28) + getB5(33) - getB5(38) + getB5(43) + getB5(48);
+            const n = 38 - getB5(4) + getB5(9) - getB5(14) + getB5(19) - getB5(24) - getB5(29) - getB5(34) - getB5(39) - getB5(44) - getB5(49);
+            const o = 8 + getB5(5) - getB5(10) + getB5(15) - getB5(20) + getB5(25) - getB5(30) + getB5(35) + getB5(40) + getB5(45) + getB5(50);
 
             // Show results
             document.getElementById('bigfive-result').classList.remove('hidden');
@@ -1608,11 +1620,15 @@
         }
 
         function stopDroneHarmonics() {
-            if (droneOsc && droneGain) {
+            if (droneOsc && droneGain && audioCtx) {
                 const now = audioCtx.currentTime;
-                droneGain.gain.cancelScheduledValues(now);
-                droneGain.gain.linearRampToValueAtTime(0, now + 1.5);
-                droneOsc.stop(now + 2.0);
+                try {
+                    droneGain.gain.cancelScheduledValues(now);
+                    droneGain.gain.linearRampToValueAtTime(0, now + 1.5);
+                    droneOsc.stop(now + 2.0);
+                } catch(e) {
+                    console.warn("Drone stopping scheduled tasks error caught gracefully", e);
+                }
                 droneOsc = null;
                 droneGain = null;
             }
@@ -1813,11 +1829,43 @@
             modal.innerHTML = `
                 <div class="flex items-center space-x-3 text-amber-600">
                     <i class="fa-solid fa-circle-info text-2xl"></i>
-                    <h4 class="font-extrabold text-slate-850 text-slate-800 text-sm uppercase tracking-wider">${title}</h4>
+                    <h4 class="font-extrabold text-slate-800 text-sm uppercase tracking-wider">${title}</h4>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">${body}</p>
                 <button onclick="this.parentElement.parentElement.remove()" class="w-full bg-obisl-primary text-white py-2.5 rounded-xl text-xs font-bold hover:bg-blue-600 transition uppercase tracking-wider shadow-sm">Acknowledge</button>
             `;
+
+            overlay.appendChild(modal);
+            document.body.appendChild(overlay);
+        }
+
+        // Iframe Safe UI Confirm Modal 
+        function confirmModal(title, body, onConfirm) {
+            const overlay = document.createElement('div');
+            overlay.className = "fixed inset-0 z-[100] bg-slate-900/40 flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in";
+            overlay.onclick = () => overlay.remove();
+
+            const modal = document.createElement('div');
+            modal.className = "bg-white border border-slate-200 p-6 rounded-2xl max-w-sm w-full shadow-xl space-y-4";
+            modal.onclick = (e) => e.stopPropagation();
+
+            modal.innerHTML = `
+                <div class="flex items-center space-x-3 text-rose-600">
+                    <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
+                    <h4 class="font-extrabold text-slate-800 text-sm uppercase tracking-wider">${title}</h4>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">${body}</p>
+                <div class="flex space-x-3 pt-2">
+                    <button id="btn-confirm-cancel" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 py-2.5 rounded-xl text-xs font-bold transition uppercase tracking-wider">Cancel</button>
+                    <button id="btn-confirm-ok" class="flex-1 bg-rose-600 hover:bg-rose-700 text-white py-2.5 rounded-xl text-xs font-bold transition uppercase tracking-wider shadow-sm">Confirm</button>
+                </div>
+            `;
+            
+            modal.querySelector('#btn-confirm-cancel').onclick = () => overlay.remove();
+            modal.querySelector('#btn-confirm-ok').onclick = () => {
+                onConfirm();
+                overlay.remove();
+            };
 
             overlay.appendChild(modal);
             document.body.appendChild(overlay);
@@ -1840,6 +1888,41 @@
 
         function loadProgress() {
             try {
+                // Read and restore daily log
+                const dailyRaw = localStorage.getItem('obisl_daily_track');
+                if (dailyRaw) {
+                    const dailyData = JSON.parse(dailyRaw);
+                    if (dailyData.dayId) document.getElementById('growth-day').value = dailyData.dayId;
+                    if (dailyData.logDate) {
+                        document.getElementById('growth-date').value = dailyData.logDate;
+                        document.getElementById('report-date').value = dailyData.logDate;
+                    }
+                    if (dailyData.aff) document.getElementById('daily-affirmation').value = dailyData.aff;
+                    if (dailyData.learn) document.getElementById('daily-learned').value = dailyData.learn;
+                    if (dailyData.note) document.getElementById('daily-note').value = dailyData.note;
+                    
+                    if (dailyData.checklist) {
+                        document.getElementById('chk-future').checked = !!dailyData.checklist.futureGuidance;
+                        document.getElementById('chk-mindfulness').checked = !!dailyData.checklist.mindfulnessDone;
+                        if (dailyData.checklist.task1Name) document.getElementById('txt-task1').value = dailyData.checklist.task1Name;
+                        document.getElementById('chk-task1').checked = !!dailyData.checklist.task1Done;
+                        if (dailyData.checklist.task2Name) document.getElementById('txt-task2').value = dailyData.checklist.task2Name;
+                        document.getElementById('chk-task2').checked = !!dailyData.checklist.task2Done;
+                    }
+                    
+                    if (dailyData.health) {
+                        if (dailyData.health.food1) document.getElementById('food1').value = dailyData.health.food1;
+                        if (dailyData.health.food2) document.getElementById('food2').value = dailyData.health.food2;
+                        if (dailyData.health.food3) document.getElementById('food3').value = dailyData.health.food3;
+                        if (typeof dailyData.health.water !== 'undefined') {
+                            waterVolume = parseFloat(dailyData.health.water) || 0;
+                            document.getElementById('water-lbl').innerText = `${waterVolume.toFixed(2)}L`;
+                        }
+                        if (dailyData.health.exercise) document.getElementById('exercise-mins').value = dailyData.health.exercise;
+                    }
+                }
+
+                // Read and restore global tracking metrics
                 const raw = localStorage.getItem('obisl_campus_progress_v3');
                 if(!raw) return;
                 const progress = JSON.parse(raw);
@@ -1847,7 +1930,6 @@
                 // Restore Language Preference
                 if(progress.currentLanguage) {
                     currentLanguage = progress.currentLanguage;
-                    changeLanguage(currentLanguage);
                 }
                 
                 // Restore OEJTS
@@ -1872,15 +1954,12 @@
                 if(progress.bmiHeight) document.getElementById('bmi-height').value = progress.bmiHeight;
                 if(progress.bmiWeight) document.getElementById('bmi-weight').value = progress.bmiWeight;
                 if(progress.studentName) document.getElementById('report-name').value = progress.studentName;
-                if(progress.waterVolume) {
+                if(progress.waterVolume && !dailyRaw) {
                     waterVolume = progress.waterVolume;
                     document.getElementById('water-lbl').innerText = `${waterVolume.toFixed(2)}L`;
                 }
 
                 if(progress.bmiHeight && progress.bmiWeight) calculateBMI();
-                
-                // Triggers state maps
-                restoreStateMapping();
 
             } catch(e) {
                 console.error("Local storage restoration failed", e);
@@ -1888,11 +1967,15 @@
         }
 
         function resetJournalData() {
-            if(confirm("Are you sure you want to completely delete your developmental records and restart?")) {
-                localStorage.removeItem('obisl_campus_progress_v3');
-                localStorage.removeItem('obisl_daily_track');
-                window.location.reload();
-            }
+            confirmModal(
+                "Reset Progress / දත්ත ඉවත් කරන්න", 
+                "Are you sure you want to completely delete your developmental records and restart?", 
+                function() {
+                    localStorage.removeItem('obisl_campus_progress_v3');
+                    localStorage.removeItem('obisl_daily_track');
+                    window.location.reload();
+                }
+            );
         }
     </script>
 </body>
